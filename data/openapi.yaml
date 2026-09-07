@@ -39,7 +39,7 @@ paths:
         - Единичная отправка
       summary: Отправка через API
       description: |
-        В этом методе можно использовать синтаксис Jinja2. Такие констуркции, как: {% if %}{% endif %} {% for %}{% endfor %} Название Переменная Тип Обязательный Комментарий Отправитель email_from Строка ✔ Формат: ИмяОтправителя <ИмейлОтправителя> Получатель email_to Строка ✔ Тема письма subject Строка ✔ Вёрстка письма message_text Строка ✔ если не передан template_id ID шаблона в Mailganer template_id ✔ если не передан message_text Для работы необходимо передать заголовок Mg-Api-Key с API-ключом от Mai
+        В этом методе можно использовать синтаксис Jinja2. Такие констуркции, как: {% if %}{% endif %} {% for %}{% endfor %} Название Переменная Тип Обязательный Комментарий Отправитель email_from Строка ✔ Формат: ИмяОтправителя <ИмейлОтправителя> Получатель email_to Строка ✔ Тема письма subject Строка ✔ HTML-версия письма message_text Строка ✔ если не передан template_id Текстовая версия письма message_text_plain Строка Версия письма для часов message_text_watch Строка AMP-версия письма message_text_am
       responses:
         "200":
           description: Successful response
@@ -49,7 +49,7 @@ paths:
         - Пакетная отправка
       summary: Отправка XML v1
       description: |
-        Возможные значения поля статус (#ed40973f-9603-41df-811d-0fbbd0d968c2) Пример XML-пакета <list> <body> <Data> <![CDATA[ <html> <img class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; src="cid:de43239e9118fe7c44d915072f99cd15"/> // пример как встроить файл вёрстку Код: {{f
+        Возможные значения поля статус (#ed40973f-9603-41df-811d-0fbbd0d968c2) Пример XML-пакета <list> <body> <Data> <![CDATA[ <html> <img class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; class=&#x27;preserveHtml&#x27; src="cid:de43239e9118fe7c44d915072f99cd15"/> // пример как
       parameters:
         - name: url
           in: query
@@ -91,6 +91,10 @@ paths:
         Код Описание E000 Неверный API ключ E001 Не передан URL E002 Не передан pack_id E003 Информация о пакете не найдена S004 Пакет отправляется S005 Пакет принят S007 В процессе обработки возникла ошибка S009 В очереди на генерацию S011 Пакет обрабатывается S013 Рассылка отменена пользователем S018 Пакет отправлен S020 Пакет на модерации S021 Прошёл модерацию S022 Не прошёл модерацию Визуализация (https://www.figma.com/board/WiashNNIHSFSBdFScoiMZe/%D0%A1%D0%BC%D0%B5%D0%BD%D0%B0-%D1%81%D1%82%D0%B0%D1
       parameters:
         - name: issuen
+          in: query
+          schema:
+            type: string
+        - name: external_id
           in: query
           schema:
             type: string
@@ -541,6 +545,15 @@ paths:
       responses:
         "200":
           description: Successful response
+  /api/v2/ip:
+    get:
+      tags:
+        - Рассылки
+      summary: Информация об IP-адресе
+      description: "Метод возвращает массив IP-адресов, с которых производится отправка писем."
+      responses:
+        "200":
+          description: Successful response
   /api/v2/blist:
     get:
       tags:
@@ -561,7 +574,7 @@ paths:
       tags:
         - Рассылки
       summary: Создать рассылку
-      description: Создать рассылку
+      description: Данный метод доступен только клиентам White label
       responses:
         "200":
           description: Successful response
@@ -570,16 +583,7 @@ paths:
       tags:
         - Рассылки
       summary: Обновить рассылку
-      description: Обновить рассылку
-      responses:
-        "200":
-          description: Successful response
-  /api/v2/ip:
-    get:
-      tags:
-        - Рассылки
-      summary: Информация об IP-адресе
-      description: "Метод возвращает массив IP-адресов, с которых производится отправка писем."
+      description: Данный метод доступен только клиентам White label
       responses:
         "200":
           description: Successful response
@@ -597,7 +601,7 @@ paths:
       tags:
         - Ключи
       summary: Создать API-ключ
-      description: Создать API-ключ
+      description: Данный метод доступен только клиентам White label
       requestBody:
         content:
           application/json:
@@ -636,13 +640,13 @@ paths:
       responses:
         "200":
           description: Successful response
-  /api/v2/emails/clean/:
+  /api/v1/emails/correct/:
     post:
       tags:
         - Валидация
-      summary: Стандартизация
+      summary: Исправление
       description: |
-        Поле Тип Обязательность Описание email string да Имейл, по которому был сделал запрос corrected string да Исправленный имейл local string да Локальная часть (до собаки @) domain string да Домен имейла type string да personal - личный (@mail.ru, @yandex.ru) corp - корпоративный (@myshop.ru) role - «ролевой» (info@, support@) temp - одноразовый (@temp-mail.ru)
+        Для работы метода необходимо передать дополнительный API-ключ от сервиса Mailganer в заголовок Mg-Api-Key Получить API-ключ можно в личном кабинете личном кабинете (https://mailganer.com/app/profile/settings/api/) Поле Тип Обязательность Описание email string да Имейл, по которому был сделал запрос corrected_email string нет Исправленный имейл
       requestBody:
         content:
           application/json:
@@ -651,18 +655,18 @@ paths:
       responses:
         "200":
           description: Successful response
-  /api/v2/emails/activity/:
-    post:
+  /api/v2/email/activity:
+    get:
       tags:
         - Валидация
       summary: Активность
       description: |
         Активность имейла - это метод, позволяющий получить информацию о том, как данный подписчик взаимодействует со своей почтой. Данные предоставляются в обезличенном формате на основе сборной аналитики клиентов сервиса. Поле Тип Описание timestamp string Дата последнего взаимодйствия с письмами в формате Timestamp activity_category string Категория подписчика Описание категорий подписчиков Категория Описание A Читал и переходил по письмам за последние 15 дней B Читал и переходил по письмам за послед
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
+      parameters:
+        - name: email
+          in: query
+          schema:
+            type: string
       responses:
         "200":
           description: Successful response
