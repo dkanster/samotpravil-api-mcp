@@ -208,3 +208,9 @@ swagger-mcp остаётся отдельным upstream ([Vizioz/Swagger-MCP](h
 - [official/README.md](./official/README.md) — публикация MCP-блока в documenter
 - [API_WISHLIST.md](./API_WISHLIST.md) — предложения по развитию HTTP API (для команды Samotpravil)
 - [CONTRIBUTING.md](../CONTRIBUTING.md) — структура кода
+
+## Пример SaaS и клиенты
+
+- Node API client: https://www.npmjs.com/package/samotpravil
+- SaaS skeleton (two keys): https://github.com/dkanster/samotpravil-example
+- Python MCP (pip): https://pypi.org/project/mailganer-samotpravil-mcp/
