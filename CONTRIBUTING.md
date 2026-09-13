@@ -127,6 +127,8 @@ npm run release-prepare           # pre-flight перед npm tag
 2. Tag `v*`
 3. Workflow `publish.yml` публикует в npm
 
+Правки после публикации в [cursor.directory](https://cursor.directory) — там же, секция «Cursor Directory»: не создавать вторую карточку на этот репозиторий.
+
 ## Issue templates
 
 - **Bug** — воспроизведение, окружение

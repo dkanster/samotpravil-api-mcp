@@ -49,7 +49,9 @@ npx -y samotpravil-mcp@latest
 
 ### Cursor Directory
 
-Каталог сообщества [cursor.directory](https://cursor.directory) автодетектит MCP из корневого [`.mcp.json`](./.mcp.json) (дубль: [`mcp.json`](./mcp.json), манифест [`plugin.json`](./plugin.json)). Отправка: [cursor.directory/plugins/new](https://cursor.directory/plugins/new) → URL этого репозитория. В листинг не входят swagger-mcp и Postman maintainer.
+Каталог сообщества [cursor.directory](https://cursor.directory) автодетектит MCP из корневого [`.mcp.json`](./.mcp.json) (дубль: [`mcp.json`](./mcp.json), манифест [`plugin.json`](./plugin.json)). Первая отправка: [cursor.directory/plugins/new](https://cursor.directory/plugins/new) → URL этого репозитория (вход GitHub/Google). В листинг не входят swagger-mcp и Postman maintainer.
+
+Дальше править код и карточку — [docs/PUBLISH.md](./docs/PUBLISH.md) § «Cursor Directory»: релиз npm по tag `v*`; карточку Directory не слать второй раз (дубли). Add to Cursor у уже поставивших сам не обновляется.
 
 ---
 
