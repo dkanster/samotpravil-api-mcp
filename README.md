@@ -45,6 +45,19 @@ npx -y samotpravil-mcp@latest
 
 Бесплатного тестового ключа нет: регистрация в ЛК → верификация домена отправителя → ключ в env. Пакетную боевую отправку по умолчанию не открываем (`SAMOTPRAVIL_ALLOW_SEND=0`).
 
+### Экосистема (рядом с MCP)
+
+| Артефакт | Ссылка |
+|----------|--------|
+| Спека OpenAPI | https://spec.samotpravil.ru/openapi.yaml |
+| Node-клиент API | [`npm i samotpravil`](https://www.npmjs.com/package/samotpravil) |
+| Пример SaaS (два ключа TX/MKT) | [dkanster/samotpravil-example](https://github.com/dkanster/samotpravil-example) |
+| Python MCP (pip) | [`mailganer-samotpravil-mcp`](https://pypi.org/project/mailganer-samotpravil-mcp/) |
+| Smithery | [daniil-kozemiakin/samotpravil](https://smithery.ai/servers/daniil-kozemiakin/samotpravil) |
+| Cursor Directory | [samotpravil-api-mcp](https://cursor.directory/plugins/samotpravil-api-mcp) |
+
+Для SaaS сразу два API-ключа (разные стоп-листы и webhook URL) — см. пример выше.
+
 Сценарии и конфиги для Claude / VS Code: **[docs/EXAMPLES.md](./docs/EXAMPLES.md)**
 
 ### Cursor Directory
