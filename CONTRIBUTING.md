@@ -19,6 +19,8 @@ npm run dev
 ## Структура проекта
 
 ```
+.mcp.json / mcp.json    # Open Plugins — cursor.directory auto-detect
+plugin.json             # Agent Plugins manifest
 src/
   index.ts              # MCP server entry, tools registration
   docs.ts               # Postman collection loader, search, format

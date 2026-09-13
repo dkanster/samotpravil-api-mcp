@@ -6,7 +6,7 @@
 
 MCP-сервер вокруг [документации API СамОтправил](https://documentation.samotpravil.ru/) и HTTP API `api.samotpravil.ru`.
 
-**Версия:** 1.7.0 · **npm:** [`samotpravil-mcp`](https://www.npmjs.com/package/samotpravil-mcp) · **MCP Registry:** `io.github.dkanster/samotpravil-api-mcp` · **Smithery:** [`smithery.yaml`](./smithery.yaml)
+**Версия:** 1.8.0 · **npm:** [`samotpravil-mcp`](https://www.npmjs.com/package/samotpravil-mcp) · **MCP Registry:** `io.github.dkanster/samotpravil-api-mcp` · **Smithery:** [`smithery.yaml`](./smithery.yaml) · **Cursor Directory:** [`.mcp.json`](./.mcp.json)
 
 > **Хостинг:** репозиторий временно в [dkanster/samotpravil-api-mcp](https://github.com/dkanster/samotpravil-api-mcp).  
 > **Планируется:** переезд в org **Samotpravil** → `@samotpravil/mcp` — [docs/ORG_MIGRATION.md](./docs/ORG_MIGRATION.md).
@@ -43,7 +43,13 @@ npx -y samotpravil-mcp@latest
 
 `SAMOTPRAVIL_API_KEY` опционален для docs-only tools. После правок: **Settings → MCP → Reload**.
 
+Бесплатного тестового ключа нет: регистрация в ЛК → верификация домена отправителя → ключ в env. Пакетную боевую отправку по умолчанию не открываем (`SAMOTPRAVIL_ALLOW_SEND=0`).
+
 Сценарии и конфиги для Claude / VS Code: **[docs/EXAMPLES.md](./docs/EXAMPLES.md)**
+
+### Cursor Directory
+
+Каталог сообщества [cursor.directory](https://cursor.directory) автодетектит MCP из корневого [`.mcp.json`](./.mcp.json) (дубль: [`mcp.json`](./mcp.json), манифест [`plugin.json`](./plugin.json)). Отправка: [cursor.directory/plugins/new](https://cursor.directory/plugins/new) → URL этого репозитория. В листинг не входят swagger-mcp и Postman maintainer.
 
 ---
 

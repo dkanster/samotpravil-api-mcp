@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "samotpravil",
+  "version": "1.8.0",
+  "description": "MCP for Samotpravil SMTP: API docs, delivery status, stop-list, and gated send. No free sandbox key — register, verify the sending domain, then set SAMOTPRAVIL_API_KEY.",
+  "author": {
+    "name": "Samotpravil",
+    "url": "https://samotpravil.ru"
+  },
+  "homepage": "https://spec.samotpravil.ru/",
+  "repository": "https://github.com/dkanster/samotpravil-api-mcp",
+  "license": "MIT",
+  "keywords": ["mcp", "email", "smtp", "transactional", "samotpravil"]
+}

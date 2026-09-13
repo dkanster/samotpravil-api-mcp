@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "samotpravil": {
+      "command": "npx",
+      "args": ["-y", "samotpravil-mcp@latest"],
+      "env": {
+        "SAMOTPRAVIL_API_KEY": "${SAMOTPRAVIL_API_KEY}",
+        "SAMOTPRAVIL_READ_ONLY": "1",
+        "SAMOTPRAVIL_ALLOW_SEND": "0",
+        "SAMOTPRAVIL_ALLOW_MUTATIONS": "0",
+        "SAMOTPRAVIL_ALLOW_GENERIC_API": "0"
+      }
+    }
+  }
+}
