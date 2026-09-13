@@ -1,6 +1,6 @@
 {
   "name": "samotpravil-mcp",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "MCP server for Samotpravil SMTP API — documentation search and API proxy. Interim npm: samotpravil-mcp; future: @samotpravil/mcp after org migration.",
   "type": "module",
   "main": "dist/index.js",

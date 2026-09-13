@@ -4,6 +4,30 @@ All notable changes to this project are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.9.0](https://github.com/dkanster/samotpravil-api-mcp/compare/v1.8.0...v1.9.0) (2026-09-13)
+
+
+### Features
+
+* add Open Plugins manifests for cursor.directory ([fd40ead](https://github.com/dkanster/samotpravil-api-mcp/commit/fd40eadb5121a9f23f022bc7ad01c158cd7581dd))
+* check-scaffold-ship for upstream v2 tool readiness ([#70](https://github.com/dkanster/samotpravil-api-mcp/issues/70)) ([39c6011](https://github.com/dkanster/samotpravil-api-mcp/commit/39c6011dc07c3df6ef21034a906eef8b055c7207))
+* Docusaurus smoke workflow and org migration issue template ([#62](https://github.com/dkanster/samotpravil-api-mcp/issues/62)) ([04230f0](https://github.com/dkanster/samotpravil-api-mcp/commit/04230f0f623fa9a61e2830bf74bec8e1de8042c5))
+* maintainer status report and promo materials v1.8.0 ([#66](https://github.com/dkanster/samotpravil-api-mcp/issues/66)) ([18a1b30](https://github.com/dkanster/samotpravil-api-mcp/commit/18a1b3051d43bf7948f6da7bbd1ccd0b93c6aaaa))
+* naming decision C, org/promo handoff --write ([#71](https://github.com/dkanster/samotpravil-api-mcp/issues/71)) ([46aa895](https://github.com/dkanster/samotpravil-api-mcp/commit/46aa895639b8a87333149bf193a30f8d7ec56c08))
+* org migration preflight and scaffold checks ([#61](https://github.com/dkanster/samotpravil-api-mcp/issues/61)) ([9563d67](https://github.com/dkanster/samotpravil-api-mcp/commit/9563d67d1fbe48d6f99d2362278d2fd41074b9f2))
+* promo checklist automation and CI v1.9 readiness ([#73](https://github.com/dkanster/samotpravil-api-mcp/issues/73)) ([48ff931](https://github.com/dkanster/samotpravil-api-mcp/commit/48ff931dd8e11970d6ea7411585a5f5c40f4cdaa))
+* promo handoff and superseded PR tracker ([#68](https://github.com/dkanster/samotpravil-api-mcp/issues/68)) ([b10619c](https://github.com/dkanster/samotpravil-api-mcp/commit/b10619c5bf022ed15698223ce3025c1ed09577ce))
+* release PR body generator with readiness snapshot ([#75](https://github.com/dkanster/samotpravil-api-mcp/issues/75)) ([9575b2f](https://github.com/dkanster/samotpravil-api-mcp/commit/9575b2f55ff65df496b868204520705392a8f5ca))
+* release-please check and maintainer bundle ([#74](https://github.com/dkanster/samotpravil-api-mcp/issues/74)) ([ef75899](https://github.com/dkanster/samotpravil-api-mcp/commit/ef75899002c2e58e614f494b36d9a65a17fff46a))
+* repo naming decision docs and plan-rename tooling ([#67](https://github.com/dkanster/samotpravil-api-mcp/issues/67)) ([71c9e34](https://github.com/dkanster/samotpravil-api-mcp/commit/71c9e34d2a3abf498b31f9a2fb2d8d04047ebc45))
+* v1.9 readiness aggregator and weekly handoff artifacts ([#72](https://github.com/dkanster/samotpravil-api-mcp/issues/72)) ([1a1efa9](https://github.com/dkanster/samotpravil-api-mcp/commit/1a1efa9ab3d8169a7dc0627f83e8cf006a5b0c58))
+* weekly org preflight and Scalar reference CI checks ([#63](https://github.com/dkanster/samotpravil-api-mcp/issues/63)) ([2b1f114](https://github.com/dkanster/samotpravil-api-mcp/commit/2b1f114562441f495df6a21e167734f6a6e33bb6))
+
+
+### Bug Fixes
+
+* skip rename-alternative guard after variant B applied ([e8b33ff](https://github.com/dkanster/samotpravil-api-mcp/commit/e8b33ff774c6457836b60abf88f5348fda914306))
+
 ## [Unreleased]
 
 ### Added

@@ -8,13 +8,13 @@
     "url": "https://github.com/dkanster/samotpravil-api-mcp",
     "source": "github"
   },
-  "version": "1.8.0",
+  "version": "1.9.0",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "samotpravil-mcp",
-      "version": "1.8.0",
+      "version": "1.9.0",
       "transport": {
         "type": "stdio"
       },
